@@ -1,0 +1,148 @@
+[
+ {
+  "name": "Blusas",
+  "price": 200000,
+  "description": "CAMISAS Y BLUSAS PARA MUJER\r\nDESDE LAS CLÁSICAS CAMISAS BLANCAS HASTA BLUSAS CON ESTAMPADOS FLORALES, EN NUESTRA COLECCIÓN DE CAMISAS Y BLUSAS ENCONTRARÁS UN SINFÍN DE IDEAS PARA TUS LOOKS. CAMISAS DENIM, DE CUADROS, ESTILO TÚNICA Y BLUSAS DE ENCAJE SE ACTUALIZAN PARA COMBINARSE CON CUALQUIER PRENDA, DESDE FALDAS ENRIQUECIDAS HASTA CON TUS VAQUEROS FAVORITOS.",
+  "stars": 0,
+  "category": "Blusas",
+  "img-pr": "im-1641236330674.webp",
+  "img-se": [
+   "im-1641236330678.webp",
+   "im-1641236330679.webp"
+  ],
+  "colours": [
+   "red",
+   "blue",
+   "green"
+  ],
+  "sizes": [
+   "S",
+   "M"
+  ],
+  "id": 1
+ },
+ {
+  "name": "Blusa",
+  "price": 4446545,
+  "description": "CAMISAS Y BLUSAS PARA MUJER\r\nDESDE LAS CLÁSICAS CAMISAS BLANCAS HASTA BLUSAS CON ESTAMPADOS FLORALES, EN NUESTRA COLECCIÓN DE CAMISAS Y BLUSAS ENCONTRARÁS UN SINFÍN DE IDEAS PARA TUS LOOKS. CAMISAS DENIM, DE CUADROS, ESTILO TÚNICA Y BLUSAS DE ENCAJE SE ACTUALIZAN PARA COMBINARSE CON CUALQUIER PRENDA, DESDE FALDAS ENRIQUECIDAS HASTA CON TUS VAQUEROS FAVORITOS.",
+  "stars": 0,
+  "category": "Blusas",
+  "img-pr": "im-1641236486889.PNG",
+  "img-se": [
+   "im-1641236486898.PNG",
+   "im-1641236486914.PNG"
+  ],
+  "colours": [
+   "blue",
+   "green"
+  ],
+  "sizes": [
+   "S",
+   "M"
+  ],
+  "id": 2
+ },
+ {
+  "id": 3,
+  "name": "VESTIDO BORDADOS PERFORADOS",
+  "price": 1231213,
+  "description": "Imagen 4 de VESTIDO BORDADOS PERFORADOS de Zara\r\nVESTIDO BORDADOS PERFORADOS\r\nVESTIDO MIDI DE CUELLO REDONDO Y MANGA LARGA ABULLONADA ACABADA EN ELÁSTICO. BAJO ACABADO EN PANELES. FORRO INTERIOR. DETALLE DE BORDADOS PERFORADOS.",
+  "category": "Vestidos",
+  "colours": [
+   "red",
+   "blue"
+  ],
+  "sizes": [
+   "S",
+   "M"
+  ],
+  "stars": 0,
+  "img-pr": "im-1641236689887.webp",
+  "img-se": [
+   null
+  ]
+ },
+ {
+  "name": "CAMISETA TUL TIE DYE",
+  "price": 121531512,
+  "description": "CAMISETA SEMITRANSPARENTE DE CUELLO REDONDO Y MANGA LARGA.",
+  "stars": 0,
+  "category": "Blusas",
+  "img-pr": "im-1641236767742.webp",
+  "img-se": [
+   "im-1641236767743.svg",
+   "im-1641236767744.webp"
+  ],
+  "colours": [
+   "red",
+   "blue"
+  ],
+  "sizes": [
+   "XS",
+   "S"
+  ],
+  "id": 4
+ },
+ {
+  "name": "CUERPO ESTRUCTURA",
+  "price": 10100,
+  "description": "CUERPO DE ESCOTE RECTO Y TIRANTES FINOS AJUSTABLES CON LAZADA.",
+  "stars": 0,
+  "category": "Monos",
+  "img-pr": "im-1641236939360.webp",
+  "img-se": [
+   "im-1641236939361.webp",
+   "im-1641236939361.webp"
+  ],
+  "colours": [
+   "blue",
+   "green"
+  ],
+  "sizes": [
+   null
+  ],
+  "id": 5
+ },
+ {
+  "name": "VESTIDO BORDADOS PERFORADOS",
+  "price": 10000,
+  "description": "VESTIDO MIDI DE CUELLO REDONDO Y MANGA LARGA ABULLONADA ACABADA EN ELÁSTICO. BAJO ACABADO EN PANELES. FORRO INTERIOR. DETALLE DE BORDADOS",
+  "stars": 0,
+  "category": "Vestidos",
+  "img-pr": "im-1641237041978.webp",
+  "img-se": [
+   "im-1641237041979.webp",
+   "im-1641237041980.webp"
+  ],
+  "colours": [
+   "blue",
+   "green"
+  ],
+  "sizes": [
+   "S",
+   "M"
+  ],
+  "id": 6
+ },
+ {
+  "name": "CHAQUETA CRUZADA COMBINADA PUNTO",
+  "price": 30000,
+  "description": "CHAQUETA DE ESCOTE PICO Y MANGA POR DEBAJO DEL CODO. DETALLE DE TEJIDO COMBINADO EN ORGANZA. CIERRE FRONTAL CRUZADO CON LAZADA.",
+  "stars": 0,
+  "category": "Remeras",
+  "img-pr": "im-1641237153697.webp",
+  "img-se": [
+   "im-1641237153698.webp",
+   "im-1641237153699.webp"
+  ],
+  "colours": [
+   "red",
+   "blue"
+  ],
+  "sizes": [
+   "XS",
+   "S"
+  ],
+  "id": 7
+ }
+]

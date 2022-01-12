@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+        <main> 
+            <section>
+                <article>
+                    <h4 class="title">Tu carrito de compras</h4>
+                </article>
+                <article class="paso">
+                    <h2 class="pasoUno">1</h2>
+                    <a href='/products/productCart2'><h2>2</h2></a>
+                    <a href='/products/productCart3'><h2>3</h2></a>
+                    <a href='/products/productCart4'><h2>4</h2></a>
+                </article>
+            </section>
+
+            <p class="title-1-prodCart">
+                Tu carrito tiene x productos distintos
+            </p>
+            
+            <section class="det-compra">
+                <article class="detalle-prod">
+                    <div class="imagen-prod"><img src="/images/blusa.PNG" alt="Foto del producto" class="Foto del producto"></div>
+                    <div>
+                        <h4>Lorem ipsum dolor sit</h4>
+                        <p>Talle x</p>
+                        <div>
+                            <form action="/" method="POST">
+                                <label for="cant">
+                                    Cantidad:
+                                    <input type="number" id="cant" name="cant">
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="precio">
+                    <div>
+                        <h4>PRECIO UNITARIO:</h4>
+                        <p>AR$x.xxx</p>
+                    </div>
+                    <div>
+                        <h4>TOTAL:</h4>
+                        <p>AR$x.xxx</p>
+                    </div>
+                </article>
+
+                <article class="boton">
+                    <button type="reset">Borrar</button>
+                </article>
+            </section>
+                    <div class="bEnv">
+                        <button type="submit"> Siguiente </button>
+                    </div>
+        </main>
+        <%- include('../partials/footer') %>
+    </body>
+</html>

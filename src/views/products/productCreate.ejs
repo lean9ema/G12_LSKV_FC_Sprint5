@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include( '../partials/head') %>
+    <body>
+        <%- include('../partials/header') %>
+        <main class="charger">
+            <div>
+                <form action="/products/" method="POST" enctype="multipart/form-data">
+                    <fieldset class="form-prod-char">
+                        <legend class="legend-formulario">Crear producto</legend>
+                        
+                        <label for="name">Nombre:
+                            <input type="text" id="name" name="name" class="name" required>
+                        </label>
+                        
+                        <label for="price">Precio:
+                            <input type="number" name="price" id="price" class="price" required>
+                        </label>
+                        
+                        <label for="category">Categoria: 
+                            <select name="category" id="category">
+                                <option value="Blusas">Blusas</option>
+                                <option value="Remeras">Remeras</option>
+                                <option value="Vestidos">Vestidos</option>
+                                <option value="Monos">Monos</option>
+                                <option value="Shorts">Shorts</option>
+                                <option value="Faldas">Faldas</option>
+                                <option value="Jeans">Jeans</option>
+                                <option value="Pantalones">Pantalones</option>
+                            </select>
+                         </label>
+                        
+                        <label for="color">Colores:
+                            <div class="color">
+                                <div class="check-c-s">
+                                    <input type="checkbox" value="red" name="color"> Rojo
+                                </div>
+                                <div class="check-c-s">
+                                    <input type="checkbox" value="blue" name="color"> Azul
+                                </div>
+                                <div class="check-c-s">
+                                    <input type="checkbox" value="green" name="color"> Verde
+                                </div>
+                                <div class="check-c-s">
+                                    <input type="checkbox" value="black" name="color"> Negro
+                                </div>
+                                <div class="check-c-s">
+                                    <input type="checkbox" value="white" name="color"> Blanco
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label for="sizes">Talles:
+                            <div class="checkbox-input">
+                                <div class="check-c-s">
+                                    <input name="sizes" type="checkbox" value="XS"> XS
+                                </div>
+                                <div class="check-c-s">
+                                    <input name="sizes" type="checkbox" value="S"> S
+                                </div>
+                                <div class="check-c-s">
+                                    <input name="sizes" type="checkbox" value="M"> M
+                                </div>
+                                <div class="check-c-s">
+                                    <input name="sizes" type="checkbox" value="L"> L
+                                </div>
+                                <div class="check-c-s">
+                                    <input name="sizes" type="checkbox" value="XL"> XL
+                                </div>
+                            </div>
+                        </label>
+
+                        <label for="image"> Ingrese una imagen:
+                            <input type="file" id="image" name="image" required>
+                        </label>
+                        
+                        <label for="images">Imagenes secundarias:
+                            <input type="file" name="images" id="images" require multiple>
+                        </label>
+                            
+                         <label for="description">Descripción:
+                            <textarea name="description" id="description" cols="30" rows="5" class="description"></textarea>
+                         </label> 
+
+                        <div class="bt">
+                            <button type="submit">Crear</button>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <%- include('../partials/footer') %> 
+    </body>  
