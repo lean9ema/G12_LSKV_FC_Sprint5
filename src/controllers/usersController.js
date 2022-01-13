@@ -4,7 +4,6 @@ const path = require('path');
 const jsonDB = require('../model/jsonUsersDatabase');
 const userModel = jsonDB('usersDataBase');
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const usersController = {
     login: function(req,res) {
