@@ -5,10 +5,9 @@
   "surname": "Chapeton",
   "user-name": "KenetC",
   "email": "kenetchape@gmail.com",
-  "password": "contrasenia123",
-  "dni": 222222,
-  "fNac": "20-01-00",
-  "image": "im-1641764357528.PNG"
+  "dni": 222,
+  "fNac": "2000-01-20",
+  "image": "avatar-1642132423117.PNG"
  },
  {
   "user-name": "srta.septum",
@@ -42,5 +41,16 @@
   "fNac": "2222-04-05",
   "image": "im-1641764087965.jpg",
   "id": 4
+ },
+ {
+  "user-name": "asd",
+  "password": "22",
+  "name": "s",
+  "surname": "sd",
+  "email": "asd@gmail.com",
+  "dni": 2212,
+  "fNac": "2222-02-22",
+  "image": "avatar-1642132273781.PNG",
+  "id": 5
  }
 ]

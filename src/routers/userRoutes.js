@@ -12,6 +12,9 @@ router.get('/login',usersController.login);
 router.get('/register',usersController.register);
 router.post('/register', upload.single('image'), usersController.store );
 
-router.get('/:id',usersController.usuario);
+router.get('/:id', usersController.usuario);
+
+router.get('/:id/edit', usersController.edition);
+router.put('/:id/edit', upload.single('image'),usersController.update);
 
 module.exports = router;

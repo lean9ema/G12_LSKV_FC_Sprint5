@@ -63,6 +63,27 @@
   ]
  },
  {
+  "name": "CAMISETA TUL TIE DYE",
+  "price": 121531512,
+  "description": "CAMISETA SEMITRANSPARENTE DE CUELLO REDONDO Y MANGA LARGA.",
+  "stars": 0,
+  "category": "Blusas",
+  "img-pr": "im-1641236767742.webp",
+  "img-se": [
+   "im-1641236767743.svg",
+   "im-1641236767744.webp"
+  ],
+  "colours": [
+   "red",
+   "blue"
+  ],
+  "sizes": [
+   "XS",
+   "S"
+  ],
+  "id": 4
+ },
+ {
   "name": "CUERPO ESTRUCTURA",
   "price": 10100,
   "description": "CUERPO DE ESCOTE RECTO Y TIRANTES FINOS AJUSTABLES CON LAZADA.",

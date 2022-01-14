@@ -658,7 +658,7 @@ main.usuarios h1.title{
     position: relative;
     justify-content:center;
     font-family: 'Bebas Neue', cursive;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 15px 0px 40px;
 }
 
@@ -693,7 +693,7 @@ main.usuarios div div.img-user{
 div.back,
 main{ 
     max-width: 1040px;
-    margin: 95px auto 0px auto;
+    margin: 100px auto 0px auto;
 }
 
 main article.prod-detail{
@@ -1447,6 +1447,40 @@ div.text{
     margin-bottom: 15px;
 }
 
+/* User Edit */
+
+div.profile-user-edit div.im-user { 
+    display: flex;
+    flex-direction: column;
+}
+main.usuarios div.im-user div.img-user{
+    width: 90%;
+    align-self: center;
+}
+main.usuarios div.im-user div.img-user img { 
+    width: 70%;
+    border-radius: 50%;
+} 
+div.profile-user-edit div.img-form label { 
+    font-size: 13px;
+    margin:0px 10px 0px 10px;
+}
+main.usuarios div.form-izq,
+main.usuarios div.form-der { 
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px 0px 10px;
+}
+main.usuarios form div.form-izq input,
+main.usuarios form div.form-der input { 
+    margin-bottom: 7px;
+}
+main.usuarios div.form-izq{
+    margin-top: 10px ;
+}
+main.usuarios form button { 
+    margin:10px 10px 0px 10px;
+}
 @media (min-width:370px){
     /* Header */
 
@@ -1459,7 +1493,6 @@ div.text{
     header nav .header-container  div.login-home a {
         font-size: 5vw;
     } */
-    
 
     /* Footer */
     .footer-Top .description { 
@@ -1564,6 +1597,19 @@ div.text{
     main article.pago{
         display: flex;
         flex-wrap: wrap;
+    }
+    /* User Edit */
+    div.profile-user-edit div.im-user { 
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+    }
+    main.usuarios div.im-user div.img-user { 
+        width: 100%;
+        margin:0px 10px 0px 0px;
+    }
+    main.usuarios div.im-user div.img-form { 
+        width: 100%;
     }
 }
 
@@ -1680,7 +1726,7 @@ div.text{
     
     /* Product Detail */
 
-    main article div.img-container {
+    main article.prod-detail div.img-container {
         display: flex;
         width: 50%;
         flex-direction: row;
@@ -1689,6 +1735,7 @@ div.text{
     main article div.img-principal,
     main article div.img-sec{ 
         width: 45%;
+        height: 45%;
         margin: 0px;
         flex-direction: row;
         align-items: normal;
@@ -1779,6 +1826,20 @@ div.text{
     main.productList .products article { 
         width: 20%;
     }
+    /* User Edit */
+    main.usuarios div.profile-user-edit form { 
+        display: flex;
+    }
+    main.usuarios form div.im-user{ 
+        flex-direction: column;
+        width: 275px;
+    }
+    main.usuarios div.im-user div.img-user { 
+        margin: 0px ;
+    }
+    main.usuarios div.form-der { 
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 808px){
@@ -1787,7 +1848,6 @@ div.text{
         flex-direction: row;
         justify-content: space-between;
     }
-
 }
 
 @media (max-width: 808px){
