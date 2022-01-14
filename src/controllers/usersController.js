@@ -25,7 +25,7 @@ const usersController = {
 			res.redirect(`/users/${aCrearID}`);
 		}else { 
 			const error = new Error('Hubo un error intente nuevamente!')
-			res.render(error)
+			res.redirect('/users/register')
 		}
 	},
 	delete: function(req,res){
