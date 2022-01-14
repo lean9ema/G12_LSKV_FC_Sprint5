@@ -92,11 +92,9 @@ const productController = {
         'img-pr': imgP,
         'img-se': imgSecArray
     };
-      console.log(req.files);
-      
-     
-       productModel.update(productBody);
-       res.redirect("/products")
+        console.log(req.files);
+        productModel.update(productBody);
+        res.redirect("/products")
     },
     filter: (req,res)=>{ 
         const query = req.query; 

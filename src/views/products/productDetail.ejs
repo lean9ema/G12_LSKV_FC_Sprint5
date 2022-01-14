@@ -21,13 +21,13 @@
                             <a href="#"><i class="fas fa-chevron-right"></i></a>
                         </div> 
                     </div>
-                    
-                    <% product['img-se'].forEach(img => { %>
-                        <div class="img-sec">
-                            <img src = "/images/products/<%=img%>">
-                        </div>    
-                    <% }); %> 
-                    
+                    <% if(product['img-se'].length > 1){ %> 
+                        <% product['img-se'].forEach(img => { %>
+                            <div class="img-sec">
+                                <img src = "/images/products/<%=img%>">
+                            </div>    
+                        <% }); %> 
+                    <% } %> 
                 </div>
 
                 <div class="product-description">

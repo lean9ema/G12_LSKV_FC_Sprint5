@@ -40,9 +40,9 @@ const modelController =function(name){
         },
 
         update: function (user) {
-            let users = this.readFile(); 
+            let users = this.all(); 
             let update = users.map( u =>{
-                (u.id == user.id ? user : u);  
+                return (u.id == user.id ? user : u);  
             });
             this.writeFile(update); // lo guardo 
             return user.id; 

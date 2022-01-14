@@ -19,16 +19,12 @@
                     <p><span class="negrita">Nombre y apellido:</span> <%=element.name %> <%= element.surname %></p>
                     <p><span class="negrita">Email:</span> <%=element.email %></p>
                     <p><span class="negrita">Fecha de nacimiento:</span> <%=element.fNac %></p>
+                    <form action="/users/<%=element.id%>/edit">
+                        <button type="submit">Editar producto</button>
+                    </form>
                 </div>
             </div>
-            
         </main>
-        
-        
-
-        
-
-
         <%- include('../partials/footer') %> 
     </body>    
 </html>
