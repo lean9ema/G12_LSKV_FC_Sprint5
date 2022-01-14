@@ -36,7 +36,7 @@ const usersController = {
 	},
 
 	list: (req,res)=>{
-		const users = userModel.all(); 
+		const users = userModel.all();
 		res.render('users/usersList',{users});
 	},
 
