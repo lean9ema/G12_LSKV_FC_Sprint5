@@ -8,8 +8,12 @@
        
 
 
+
+
 ## More of: (cosas para mejorar) 🌼
 - Las disponibilidad de todos y avisar si estan ocupados con universidad, trabajo, etc
+
+
 
 
 
@@ -18,8 +22,12 @@
 
 
 
+
+
 ## Less of: (darle segunda oportunidad) ✌🏻
 - Hacer reuniones espontaneas si alguno esta atrasado o tiene alguna complicación
+
+
 
 
 
