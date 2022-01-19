@@ -15,7 +15,7 @@ const usersController = {
     register: function(req,res) {
         return res.render("users/register");
     },
-
+	
 	store: function(req, res){
 		if (req.file){
 			console.log(req.file);

@@ -17,4 +17,6 @@ router.get('/:id', usersController.usuario);
 router.get('/:id/edit', usersController.edition);
 router.put('/:id/edit', upload.single('image'),usersController.update);
 
+
+
 module.exports = router;
