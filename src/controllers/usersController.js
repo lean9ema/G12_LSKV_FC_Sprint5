@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const jsonDB = require('../model/jsonUsersDatabase');
 const userModel = jsonDB('usersDataBase');
@@ -17,18 +18,24 @@ const usersController = {
     },
 
 	store: function(req, res){
-		if (req.file){
-			console.log(req.file);
-			let aCrear = req.body;
-			aCrear.dni = Number(aCrear.dni);
-			aCrear.image = req.file.filename;
-			console.log(req.file)
-			let aCrearID = userModel.create(aCrear);
-			res.redirect(`/users/${aCrearID}`);
-		}else { 
-			const error = new Error('Hubo un error intente nuevamente!')
-			return next(error)
+		const resultValidation = validationResult(req);
+		
+		console.log('Aca va el file: ');
+		console.log(req.file);
+		let aCrear = req.body;
+		aCrear.dni = Number(aCrear.dni);
+		let aCrearID = userModel.create(aCrear);
+		
+		if (req.file) aCrear.image = req.file.filename;
+			// const error = new Error('Hubo un error intente nuevamente!')
+			// return next(error)
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
 		}
+		return res.redirect(`/users/${aCrearID}`);
 	},
 	delete: function(req,res){
 		const user = userModel.find(req.params.id);

@@ -6,6 +6,7 @@
 :root{
     --rojo: #BA135D;
     --rosa: #F8E2CF;
+    --letra_gris: #666;
 }
 
 main,header,footer{
@@ -332,7 +333,7 @@ main.home section article img{
 
 main.home{
     width: 95%;
-    margin: 95px auto 0px auto; 
+    margin: 100px auto 0px auto; 
 }
 
 .products article{
@@ -381,6 +382,7 @@ footer{
     flex-direction: column;
     margin: 0 10px;
     align-items: center;
+    color: var(--letra_gris);
 }
 
 .footer-Top article.description p,
@@ -399,7 +401,7 @@ footer{
 .footer-Buttom{
     display: flex;
     border-top: 1px solid black;
-    background-color: #FCD8D4;
+    background-color: var(--rosa);
     color: white;
     flex-direction: column;
 }
@@ -645,6 +647,11 @@ main .next{
     border-radius: 5%;
 }
 
+main .register label .text-danger{
+    color: red;
+    font-size: 12px;
+}
+
 /*Usuarios*/
 main.usuarios div.profile-user{
     display: flex;
@@ -693,7 +700,7 @@ main.usuarios div div.img-user{
 div.back,
 main{ 
     max-width: 1040px;
-    margin: 100px auto 0px auto;
+    margin: 110px auto 0px auto;
 }
 
 main article.prod-detail{
@@ -786,6 +793,8 @@ main div.colors a{
 }
 main div.colors a i{ 
     transition: font-size 450ms;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100,50%);
+    border-radius: 50%;
 }
 main div.colors a i:hover{
     font-size: 25px;
@@ -979,7 +988,7 @@ main.productList .title{
     position: relative;
     justify-content:center;
     font-family: 'Bebas Neue', cursive;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 15px 0px 40px;
 }
 main.productList .title2:before,
@@ -1007,12 +1016,14 @@ main.productList .products article{
 main.productList .products article:hover{
     box-shadow: #666;
 }
+main.productList .products article:hover .cat, 
 main.productList .products article:hover .category { 
     display: block;
 }
 main.productList .products .descripcion{
     padding: 10px;
 }
+main.productList .products article .cat,
 main.productList .products article .category{
     display: none;
     color: #666;
@@ -1418,7 +1429,7 @@ main article.pago div img{
 .main-empresa{
     display: flex;
     flex-direction: column;
-    margin: 85px auto 0px auto;
+    margin: 100px auto 0px auto;
     justify-content: space-between;
 }
 
@@ -1728,14 +1739,14 @@ main.usuarios form button {
 
     main article.prod-detail div.img-container {
         display: flex;
-        width: 50%;
+        width: 49%;
         flex-direction: row;
         flex-wrap: wrap;
     }
     main article div.img-principal,
     main article div.img-sec{ 
-        width: 45%;
-        height: 45%;
+        width: 170px;
+        height: 250px;
         margin: 0px;
         flex-direction: row;
         align-items: normal;
