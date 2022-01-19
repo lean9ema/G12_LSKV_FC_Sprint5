@@ -21,55 +21,45 @@
                         </label>
                         
                         <label for="category">Categoria: 
-                            <select name="catedory" id="category">
-                            <option value="Blusas">Blusas</option>
-                            <option value="Remeras">Remeras</option>
-                            <option value="Vestidos">Vestidos</option>
-                            <option value="Monos">Monos</option>
-                            <option value="Shorts">Shorts</option>
-                            <option value="Faldas">Faldas</option>
-                            <option value="Jeans">Jeans</option>
+                            <select name="category" id="category">
+                                <% for(let i=0; i< categories.length; i++){ %>
+                                    <% if( categories[i] == product.category ){ %>
+                                        <option value="<%=categories[i]%>" selected><%=categories[i]%></option>
+                                    <% }else{ %>
+                                        <option value="<%=categories[i]%>"><%=categories[i]%></option>
+                                    <% }; %>  
+                                <% }; %>  
                             </select>
                          </label>
 
                        
-                        <label for="color">Colores: 
+                         <label for="colours">Colores:
                             <div class="color">
-                                <div class="check-c-s">
-                                    <input type="checkbox" is="color" value="red"> Rojo
-                                </div>
-                                <div class="check-c-s">
-                                    <input type="checkbox" is="color" value="blue"> Azul
-                                </div>
-                                <div class="check-c-s">
-                                    <input type="checkbox" is="color" value="green"> Verde
-                                </div>
-                                <div class="check-c-s">
-                                    <input type="checkbox" is="color" value="balck"> Negro
-                                </div>
-                                <div class="check-c-s">
-                                    <input type="checkbox" is="color" value="white"> Blanco
-                                </div>
+                                
+                                <%  for(let i=0;i<colours.length;i++){ %>
+                                    <div class="check-c-s">
+                                    <% if( colours[i] == (product.colours).find(e=>e == colours[i]) ){ %>
+                                        <input type="checkbox" value="<%=colours[i]%>" name="colours" checked><%=colores[i]%>  
+                                    <% }else{ %> 
+                                        <input type="checkbox" value="<%=colours[i]%>" name="colours"><%=colores[i]%>
+                                    <% }; %>
+                                    </div>
+                                <% }; %>  
+
                             </div>
                         </label>
                         
                         <label for="sizes">Talles:
                             <div class="checkbox-input">
-                                <div class="check-c-s">
-                                    <input name="sizes" id="sizes" type="checkbox" value="XS"> XS
-                                </div>
-                                <div class="check-c-s">
-                                    <input name="sizes" id="sizes" type="checkbox" value="S"> S
-                                </div>
-                                <div class="check-c-s">
-                                    <input name="sizes" id="sizes" type="checkbox" value="M"> M
-                                </div>
-                                <div class="check-c-s">
-                                    <input name="sizes" id="sizes" type="checkbox" value="L"> L
-                                </div>
-                                <div class="check-c-s">
-                                    <input name="sizes" id="sizes" type="checkbox" value="XL"> XL
-                                </div>
+                                <%  for(let i=0;i<sizes.length;i++){ %>
+                                    <div class="check-c-s">
+                                    <% if( sizes[i] == (product.sizes).find(e=>e == sizes[i]) ){ %>
+                                        <input type="checkbox" value="<%=sizes[i]%>" name="sizes" checked><%=sizes[i]%>  
+                                    <% }else{ %> 
+                                        <input type="checkbox" value="<%=sizes[i]%>" name="sizes"><%=sizes[i]%>
+                                    <% }; %>
+                                    </div>
+                                <% }; %>  
                             </div>
                         </label>
 
@@ -77,6 +67,8 @@
                             <img src="/images/products/<%= product['img-pr'] %>" alt="" width="50px">
                             <input type="file" name="image" id="image">
                         </label>
+
+                        <% if(product['img-se'][0] !=null ){ %> 
                         <label for= "imgSec"> Marcar imagenes que se quedaran:
                             <div class="color">
                                 <% for (let i =0; i< product['img-se'].length; i++){ %>
@@ -87,6 +79,8 @@
                                 <% } %>
                             </div>
                         </label>
+                        <% }; %> 
+
                         <label for="images">Imagenes secundarias:
                             <input type="file" name="images" id="images" multiple>
                         </label>
