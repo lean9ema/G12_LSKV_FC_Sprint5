@@ -107,6 +107,15 @@ const productController = {
         }
         return res.render('products/productfilter',{productList: filtrado, Filtros: aFiltrar});
     },
+    prodCart: function (req,res){
+        console.log(req.params.id)
+        console.log(req.body.cant)
+        let prod = [req.params.id,req.body.cant]
+        let array = []
+        res.cookie('carrito', array, {maxAge:60000});
+        console.log(req.cookies.carrito)
+        res.redirect('/')
+    },
     prodCart1: function(req,res){
         return res.render("products/productCart")
     },

@@ -73,11 +73,12 @@
                     </div>
                     
                     <div class="cantidad">
-                        <form action="/" method="POST">
+                        <form action="/products/<%= product.id %>/prodCart" method="POST">
                             <label for="cant">
                                 Cantidad: 
                             </label>
                             <input type="number" id="cant" name="cant" min="1" value="1">
+                            <button type="submit" >Agregar al carrito</button>
                         </form>
                     </div>
 
