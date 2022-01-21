@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const port = 3000;
 const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
 
 app.set('view engine','ejs'); // Para "activar" ejs 
 app.set('views',path.resolve(__dirname, './src/views')); // No hace falta, cuando se tiene a views en la parte principal 
@@ -11,6 +12,8 @@ app.use(express.static('public'));  // Para los archivos estáticos en el folder
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(cookieParser());
+
 
 const usersRoutes = require('./src/routers/userRoutes');
 const productRoutes = require('./src/routers/productRoutes');
