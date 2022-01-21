@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-const jsonDB = require('../model/jsonUsersDatabase');
+const jsonDB = require('../model/jsonUsersDataBase');
 const userModel = jsonDB('usersDataBase');
 
 const log = console.log; 
