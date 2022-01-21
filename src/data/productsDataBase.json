@@ -84,45 +84,50 @@
   "id": 4
  },
  {
+  "id": 5,
   "name": "CUERPO ESTRUCTURA",
   "price": 10100,
   "description": "CUERPO DE ESCOTE RECTO Y TIRANTES FINOS AJUSTABLES CON LAZADA.",
-  "stars": 0,
   "category": "Monos",
+  "colours": [
+   "blue",
+   "green"
+  ],
+  "sizes": [
+   "XS",
+   "M"
+  ],
+  "stars": 0,
   "img-pr": "im-1641236939360.webp",
   "img-se": [
    "im-1641236939361.webp",
    "im-1641236939361.webp"
-  ],
-  "colours": [
-   "blue",
-   "green"
-  ],
-  "sizes": [
-   null
-  ],
-  "id": 5
+  ]
  },
  {
+  "id": 6,
   "name": "VESTIDO BORDADOS PERFORADOS",
   "price": 10000,
   "description": "VESTIDO MIDI DE CUELLO REDONDO Y MANGA LARGA ABULLONADA ACABADA EN ELÁSTICO. BAJO ACABADO EN PANELES. FORRO INTERIOR. DETALLE DE BORDADOS",
-  "stars": 0,
   "category": "Vestidos",
+  "colours": [
+   "blue",
+   "green",
+   "white"
+  ],
+  "sizes": [
+   "XS",
+   "S",
+   "M",
+   "L",
+   "XL"
+  ],
+  "stars": 0,
   "img-pr": "im-1641237041978.webp",
   "img-se": [
    "im-1641237041979.webp",
    "im-1641237041980.webp"
-  ],
-  "colours": [
-   "blue",
-   "green"
-  ],
-  "sizes": [
-   "S",
-   "M"
-  ],
-  "id": 6
+  ]
  },
  {
   "name": "CHAQUETA CRUZADA COMBINADA PUNTO",
