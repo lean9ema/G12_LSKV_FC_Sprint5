@@ -6,7 +6,6 @@ const colours = ['red','blue','green','black','white'];
 const colores = ['Rojo','Azul','Verde','Negro','Blanco'];
 const fs = require('fs');
 const path = require('path');
-const { Console } = require('console');
 
 const productController = {
     prodDetail: (req,res) =>{
@@ -120,13 +119,21 @@ const productController = {
         console.log(req.params.id)
         console.log(req.body.cant)
         let prod = [req.params.id,req.body.cant]
-        let array = []
-        res.cookie('carrito', array, {maxAge:60000});
+        res.cookie('carrito', prod, {maxAge:60000*60*60});
         console.log(req.cookies.carrito)
-        res.redirect('/')
+        res.redirect('/products/productCart')
     },
     prodCart1: function(req,res){
-        return res.render("products/productCart")
+        if(req.cookies.carrito){
+            let product = productModel.find(req.cookies.carrito[0])
+            product.cant = Number(req.cookies.carrito[1])
+            product.total = product.price*product.cant
+            console.log(product)
+            return res.render("products/productCart",{product})
+        }else{
+            return res.render("products/productCart")
+        }
+        
     },
     
     prodCart2: function(req,res) {
@@ -138,7 +145,15 @@ const productController = {
     },
     
     prodCart4: function(req,res) {
-        return res.render("products/productCart4")
+        if(req.cookies.carrito){
+            let product = productModel.find(req.cookies.carrito[0])
+            product.cant = Number(req.cookies.carrito[1])
+            product.total = product.price*product.cant
+            console.log(product)
+            return res.render("products/productCart4",{product})
+        }else{
+            return res.render("products/productCart4")
+        }
     },
     destroy: (req, res) =>{
         let product = productModel.find(req.params.id)
