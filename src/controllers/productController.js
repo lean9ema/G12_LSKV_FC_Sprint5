@@ -1,9 +1,8 @@
 const jsonDB = require('../model/jsonProductsDataBase');
 const productModel = jsonDB('productsDataBase');
 const categories = ["Blusas", "Remeras", "Vestidos", "Monos", "Shorts", "Faldas", "Jeans"];
-const sizes = ['XS','S','M','L','XL'];
-const colours = ['red','blue','green','black','white'];
-const colores = ['Rojo','Azul','Verde','Negro','Blanco'];
+const sizes = ['XS','S','M','L','XL','XXL'];
+const colours = [{name:'Rojo',cod:'red'},{name:'Azul',cod:'blue'},{name:'Verde',cod:'green'},{name:'Negro',cod:'black'},{name:'Blanco',cod:'white'}]
 const fs = require('fs');
 const path = require('path');
 
@@ -20,7 +19,7 @@ const productController = {
     },
 
     create: (req,res) => {
-        return res.render("products/productCreate")
+        return res.render("products/productCreate",{sizes,colours,categories})
     },
 
     store: (req,res)=>{
