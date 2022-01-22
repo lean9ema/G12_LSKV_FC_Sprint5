@@ -38,10 +38,10 @@
                                 
                                 <%  for(let i=0;i<colours.length;i++){ %>
                                     <div class="check-c-s">
-                                    <% if( colours[i] == (product.colours).find(e=>e == colours[i]) ){ %>
-                                        <input type="checkbox" value="<%=colours[i]%>" name="colours" checked><%=colores[i]%>  
+                                    <% if( colours[i].cod == (product.colours).find(e=>e == colours[i].cod) ){ %>
+                                        <input type="checkbox" value="<%=colours[i].cod%>" name="colours" checked><%=colours[i].name%>  
                                     <% }else{ %> 
-                                        <input type="checkbox" value="<%=colours[i]%>" name="colours"><%=colores[i]%>
+                                        <input type="checkbox" value="<%=colours[i].cod%>" name="colours"><%=colours[i].name%>
                                     <% }; %>
                                     </div>
                                 <% }; %>  
