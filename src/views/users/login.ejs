@@ -16,19 +16,31 @@
                            <p>¡Bienvenido de nuevo!</p>
        
                            
-                          <form action="/" method="POST">
-                              <div>
-                                   <label for="fa-user">Email</label>
-                        <input type="text" name="usuario">
+                          <form action="/users/login" method="POST">
+                              
+                                 <div>
+                                     <% if (locals.errors) { %>
+                                            <% for(let i = 0; i <errors.length; i++) { %>
+                                               
+                                                <ul> <li>   <p> <%= errors[i].msg%> </p>  </li></ul>
+                                                
+                                            <% } %>
+                                        <% } %>
+                                   <label for="email">Email</label>
+                                    <input type="text" 
+                                    name="email"
+                                    id= 'email'>
                               </div>
                               <div>
                                   <label for="password">Contraseña</label>
-                        <input type="password" name="contraseña">
-                              </div>
+                                    <input type="password" 
+                                    name="password"
+                                    id="password">
+                                </div>
                        
                         
                         <a href = "#" > ¿Has olvidado tu contraseña?</a>
-                        <button type="button">Ingresar</button>
+                        <button type="submit">Ingresar</button>
                       </form>
                       <section class="log-Red">
                         <div class="facebook">

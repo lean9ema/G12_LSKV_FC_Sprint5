@@ -25,7 +25,7 @@ router.get('/productCart3',productController.prodCart3 );
 router.get('/productCart4',productController.prodCart4 );
 
 router.get('/:productId', productController.prodDetail );
-
+router.post('/:id/prodCart',productController.prodCart)
 
 router.put("/:id/edit",upload.fields([{name: 'image'},{name: 'images'}]), productController.prodEdition);
 router.get("/:id/edit", productController.edition);

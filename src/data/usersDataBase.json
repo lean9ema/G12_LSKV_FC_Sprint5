@@ -9,15 +9,14 @@
   "fNac": "2000-01-20"
  },
  {
-  "user-name": "srta.septum",
-  "password": "123456789",
+  "id": 2,
   "name": "Vanina",
   "surname": "Vilte",
+  "user-name": "srta.septum",
   "email": "vanina.vilte@hotmail.com",
   "dni": 42225395,
   "fNac": "1999-11-22",
-  "image": "im-1641763920852.jpg",
-  "id": 2
+  "image": "im-1641763920852.jpg"
  },
  {
   "user-name": "thth",
