@@ -29,7 +29,10 @@
                             <div class="color">
                                 <% colours.forEach(colour => { %>
                                     <div class="check-c-s">
-                                        <input type="checkbox" value="<%= colour.cod %> " name="color"> <%= colour.name %> 
+                                        <input class="chk" type="checkbox" value="<%=colour.cod %>" name="color" id="<%=colour.cod %>">
+                                        <label class="lbl" for = "<%=colour.cod %>">
+                                            <img src = "/images/colores/<%= colour.cod %>.jpg"">
+                                        </label> 
                                     </div>    
                                 <% }) %>
                             </div>

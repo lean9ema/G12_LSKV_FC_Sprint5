@@ -105,31 +105,6 @@
   ]
  },
  {
-  "id": 6,
-  "name": "VESTIDO BORDADOS PERFORADOS",
-  "price": 10000,
-  "description": "VESTIDO MIDI DE CUELLO REDONDO Y MANGA LARGA ABULLONADA ACABADA EN ELÁSTICO. BAJO ACABADO EN PANELES. FORRO INTERIOR. DETALLE DE BORDADOS",
-  "category": "Vestidos",
-  "colours": [
-   "blue",
-   "green",
-   "white"
-  ],
-  "sizes": [
-   "XS",
-   "S",
-   "M",
-   "L",
-   "XL"
-  ],
-  "stars": 0,
-  "img-pr": "im-1641237041978.webp",
-  "img-se": [
-   "im-1641237041979.webp",
-   "im-1641237041980.webp"
-  ]
- },
- {
   "name": "CHAQUETA CRUZADA COMBINADA PUNTO",
   "price": 30000,
   "description": "CHAQUETA DE ESCOTE PICO Y MANGA POR DEBAJO DEL CODO. DETALLE DE TEJIDO COMBINADO EN ORGANZA. CIERRE FRONTAL CRUZADO CON LAZADA.",

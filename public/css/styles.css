@@ -971,6 +971,21 @@ input.price,
 textarea.description{ 
     width: 300px;
 }
+.form-prod-char div.check-c-s .lbl img{
+    display:inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.form-prod-char div.check-c-s .chk{
+   display: none;
+
+}
+.form-prod-char div.check-c-s .chk:checked + label img{
+    padding: 2px;
+    border:solid 4px #BA135D;
+}
 
 /* ProductList */
 

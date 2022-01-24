@@ -39,9 +39,15 @@
                                 <%  for(let i=0;i<colours.length;i++){ %>
                                     <div class="check-c-s">
                                     <% if( colours[i].cod == (product.colours).find(e=>e == colours[i].cod) ){ %>
-                                        <input type="checkbox" value="<%=colours[i].cod%>" name="colours" checked><%=colours[i].name%>  
+                                        <input class="chk" type="checkbox" value="<%=colours[i].cod %>" name="color" id="<%=colours[i].cod %>" checked>
+                                        <label class="lbl" for = "<%=colours[i].cod %>">
+                                            <img src = "/images/colores/<%= colours[i].cod %>.jpg"">
+                                        </label> 
                                     <% }else{ %> 
-                                        <input type="checkbox" value="<%=colours[i].cod%>" name="colours"><%=colours[i].name%>
+                                        <input class="chk" type="checkbox" value="<%=colours[i].cod %>" name="color" id="<%=colours[i].cod %>">
+                                        <label class="lbl" for = "<%=colours[i].cod %>">
+                                            <img src = "/images/colores/<%= colours[i].cod %>.jpg"">
+                                        </label> 
                                     <% }; %>
                                     </div>
                                 <% }; %>  
