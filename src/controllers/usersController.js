@@ -31,7 +31,7 @@ const usersController = {
 			for (let i=0; i<users.length; i++) {
 				
 				if(users[i].email==req.body.email){
-					if(req.body.password = users[i].password)
+					if(req.body.password== users[i].password)
 					{
 						usuario=users[i];
 					
@@ -46,7 +46,7 @@ const usersController = {
 
 			if  (usuario== undefined){
 				
-				return res.render('user/login', {errors: [
+				return res.render('users/login', {errors: [
 					{msg: 'Lo sentimos, no encontramos tu cuenta'}
 				]})	
 			
@@ -54,9 +54,9 @@ const usersController = {
 			console.log(usuario)
 
 			req.session.a=usuario;
-			res.render("success")
+			res.redirect("/")
 		}else {
-			return res.render("user/login", {errors: resultValidation.errors})
+			return res.render("users/login", {errors: resultValidation.errors})
 		}
       
 	
