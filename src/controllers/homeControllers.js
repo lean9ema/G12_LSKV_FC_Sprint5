@@ -9,6 +9,9 @@ const homeController = {
    contact: (req,res) =>{
         return res.render("contact");
         },
+     business: (req,res) =>{
+          return res.render("empresa")
+     }   
 }
 
 module.exports = homeController; 

@@ -27,10 +27,6 @@ app.use('/', homeRoutes);
 app.use('/products', productRoutes);
 app.use('/users', usersRoutes);
 
-app.get('/empresa', (req,res)=>{
-    res.render('empresa');
-}); 
-
 app.use( (req,res,next)=>{
     res.status(404).render('not-found');
 });

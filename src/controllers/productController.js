@@ -55,7 +55,7 @@ const productController = {
     
     edition: (req,res) => {
         let product=productModel.find(req.params.id);
-        return res.render("products/productEdition", {product,categories,colours,sizes,colores})
+        return res.render("products/productEdition", {product,categories,colours,sizes,})
     },
 
     prodEdition: (req,res)=>{
