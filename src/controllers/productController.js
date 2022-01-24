@@ -1,12 +1,10 @@
 const jsonDB = require('../model/jsonProductsDataBase');
 const productModel = jsonDB('productsDataBase');
 const categories = ["Blusas", "Remeras", "Vestidos", "Monos", "Shorts", "Faldas", "Jeans"];
-const sizes = ['XS','S','M','L','XL'];
-const colours = ['red','blue','green','black','white'];
-const colores = ['Rojo','Azul','Verde','Negro','Blanco'];
+const sizes = ['XS','S','M','L','XL','XXL'];
+const colours = [{name:'Rojo',cod:'red'},{name:'Azul',cod:'blue'},{name:'Verde',cod:'green'},{name:'Negro',cod:'black'},{name:'Blanco',cod:'white'}]
 const fs = require('fs');
 const path = require('path');
-const { Console } = require('console');
 
 const productController = {
     prodDetail: (req,res) =>{
@@ -21,7 +19,7 @@ const productController = {
     },
 
     create: (req,res) => {
-        return res.render("products/productCreate")
+        return res.render("products/productCreate",{sizes,colours,categories})
     },
 
     store: (req,res)=>{
@@ -120,13 +118,21 @@ const productController = {
         console.log(req.params.id)
         console.log(req.body.cant)
         let prod = [req.params.id,req.body.cant]
-        let array = []
-        res.cookie('carrito', array, {maxAge:60000});
+        res.cookie('carrito', prod, {maxAge:60000*60*60});
         console.log(req.cookies.carrito)
-        res.redirect('/')
+        res.redirect('/products/productCart')
     },
     prodCart1: function(req,res){
-        return res.render("products/productCart")
+        if(req.cookies.carrito){
+            let product = productModel.find(req.cookies.carrito[0])
+            product.cant = Number(req.cookies.carrito[1])
+            product.total = product.price*product.cant
+            console.log(product)
+            return res.render("products/productCart",{product})
+        }else{
+            return res.render("products/productCart")
+        }
+        
     },
     
     prodCart2: function(req,res) {
@@ -138,7 +144,15 @@ const productController = {
     },
     
     prodCart4: function(req,res) {
-        return res.render("products/productCart4")
+        if(req.cookies.carrito){
+            let product = productModel.find(req.cookies.carrito[0])
+            product.cant = Number(req.cookies.carrito[1])
+            product.total = product.price*product.cant
+            console.log(product)
+            return res.render("products/productCart4",{product})
+        }else{
+            return res.render("products/productCart4")
+        }
     },
     destroy: (req, res) =>{
         let product = productModel.find(req.params.id)

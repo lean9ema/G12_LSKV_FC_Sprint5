@@ -17,33 +17,26 @@
        
                            
                           <form action="/users/login" method="POST">
-                              <div>
+                              
+                                 <div>
+                                     <% if (locals.errors) { %>
+                                            <% for(let i = 0; i <errors.length; i++) { %>
+                                               
+                                                <ul> <li>   <p> <%= errors[i].msg%> </p>  </li></ul>
+                                                
+                                            <% } %>
+                                        <% } %>
                                    <label for="email">Email</label>
-                        <input type="text" 
-                        name="email"
-                        id= 'email'
-                        value="<%= locals.oldData ? oldData['email'] : null %>">
-                        <% if(locals.errors && errors['email']){ %>
-                            <div class="text-danger" style="width: 100%">
-                                <%= errors['email'].msg%> 
-                            </div>
-                        <% } %>
-
-                                     
-
+                                    <input type="text" 
+                                    name="email"
+                                    id= 'email'>
                               </div>
                               <div>
                                   <label for="password">Contraseña</label>
-                        <input type="password" 
-                        name="password"
-                        id="password"
-                        value='<%= locals.oldData ? oldData.password : null %>'>
-                        <% if (locals.errors && errors['password']) { %>
-                            <div class="text-danger" style="width: 100%">
-                                <%= errors['password'].msg %> 
-                            </div>
-                        <% } %>
-                              </div>
+                                    <input type="password" 
+                                    name="password"
+                                    id="password">
+                                </div>
                        
                         
                         <a href = "#" > ¿Has olvidado tu contraseña?</a>

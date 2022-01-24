@@ -9,11 +9,11 @@ const validatorLogin=require('../middlewares/login-validator')
 
 router.get('/', usersController.list); 
 router.delete('/:id',usersController.delete );
-
+//sharon logins
 router.get('/login',usersController.login); 
-//sharon login
-router.post('/login',validatorLogin,usersController.login)
-//
+//sharon session
+router.post('/login',validatorLogin, usersController.session);
+
 
 router.get('/register',usersController.register);
 router.post('/register', upload.single('image'), validations, usersController.store );

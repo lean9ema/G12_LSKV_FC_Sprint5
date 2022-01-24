@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-const jsonDB = require('../model/jsonUsersDatabase');
+const jsonDB = require('../model/jsonUsersDataBase');
+const { brotliCompressSync } = require('zlib');
 const userModel = jsonDB('usersDataBase');
 
 const log = console.log; 
@@ -10,21 +11,61 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const usersController = {
     login: function(req,res) {
-		const resultValidation = validationResult(req);
-         
-		const users = userModel.all();
-        const resultado = users.find(user=> user.email==req.body.email);
-        console.log(resultado);
-		if (resultValidation.errors.length>0) {
-			return res.render('users/login', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			}) 
-		}else{
-			return res.render('users/login');
-		}
-
+		
+	
+		res.render('users/login')
+		
     },
+    session: function (req,res){
+		
+		const resultValidation = validationResult(req);
+		//console.log(resultValidation.mapped());
+		//console.log(req.body.password);
+
+
+		if (resultValidation.isEmpty()) {
+			let users= userModel.all();
+            let usuario=undefined;
+			
+			
+			for (let i=0; i<users.length; i++) {
+				
+				if(users[i].email==req.body.email){
+					if(req.body.password = users[i].password)
+					{
+						usuario=users[i];
+					
+						break;
+					}
+					
+					
+				   }
+				  	
+			}
+		
+
+			if  (usuario== undefined){
+				
+				return res.render('user/login', {errors: [
+					{msg: 'Lo sentimos, no encontramos tu cuenta'}
+				]})	
+			
+			}
+			console.log(usuario)
+
+			req.session.a=usuario;
+			res.render("success")
+		}else {
+			return res.render("user/login", {errors: resultValidation.errors})
+		}
+      
+	
+	
+		},
+			
+				 
+        
+
     
     register: function(req,res) {
         return res.render("users/register");
@@ -117,6 +158,7 @@ const usersController = {
 		userModel.update(user_edit); 
 		res.redirect('/users');
 	}
+
    
 }
 
