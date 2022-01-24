@@ -22,34 +22,22 @@ const usersController = {
 		//console.log(resultValidation.mapped());
 		//console.log(req.body.password);
 
-
 		if (resultValidation.isEmpty()) {
 			let users= userModel.all();
             let usuario=undefined;
-			
-			
 			for (let i=0; i<users.length; i++) {
-				
 				if(users[i].email==req.body.email){
-					if(req.body.password = users[i].password)
-					{
+					if(req.body.password = users[i].password){
 						usuario=users[i];
-					
 						break;
 					}
-					
-					
-				   }
-				  	
+				}
 			}
-		
-
 			if  (usuario== undefined){
 				
 				return res.render('user/login', {errors: [
 					{msg: 'Lo sentimos, no encontramos tu cuenta'}
 				]})	
-			
 			}
 			console.log(usuario)
 
@@ -58,15 +46,7 @@ const usersController = {
 		}else {
 			return res.render("user/login", {errors: resultValidation.errors})
 		}
-      
-	
-	
-		},
-			
-				 
-        
-
-    
+	},
     register: function(req,res) {
         return res.render("users/register");
     },
