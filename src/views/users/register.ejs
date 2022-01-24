@@ -71,7 +71,8 @@
                         Confirmar contraseña:
                         <input type="password" 
                             name="confirm-password" 
-                            id="confirm-password" style="width: 100%">
+                            id="confirm-password" 
+                            value="<%= locals.oldData ? oldData.password : null %>">
                         <% if (locals.errors && errors['confirm-password']) { %>
                             <div class="text-danger" style="width: 100%">
                                 <%= errors['confirm-password'].msg %> 

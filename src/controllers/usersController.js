@@ -22,34 +22,23 @@ const usersController = {
 		//console.log(resultValidation.mapped());
 		//console.log(req.body.password);
 
-
 		if (resultValidation.isEmpty()) {
 			let users= userModel.all();
             let usuario=undefined;
-			
-			
 			for (let i=0; i<users.length; i++) {
-				
 				if(users[i].email==req.body.email){
 					if(req.body.password== users[i].password)
 					{
 						usuario=users[i];
-					
 						break;
 					}
-					
-					
-				   }
-				  	
+				}
 			}
-		
-
 			if  (usuario== undefined){
 				
 				return res.render('users/login', {errors: [
 					{msg: 'Lo sentimos, no encontramos tu cuenta'}
 				]})	
-			
 			}
 			console.log(usuario)
 
@@ -58,39 +47,39 @@ const usersController = {
 		}else {
 			return res.render("users/login", {errors: resultValidation.errors})
 		}
-      
-	
-	
-		},
-			
-				 
-        
-
-    
+	},
     register: function(req,res) {
         return res.render("users/register");
     },
 	
 	store: function(req, res){
 		const resultValidation = validationResult(req);
-		
 		console.log('Aca va el file: ');
 		console.log(req.file);
-		let aCrear = req.body;
-		aCrear.dni = Number(aCrear.dni);
-		let aCrearID = userModel.create(aCrear);
-		
-		if (req.file) aCrear.image = req.file.filename;
 			// const error = new Error('Hubo un error intente nuevamente!')
 			// return next(error)
-			console.log(resultValidation.errors)
+		console.log(resultValidation.errors)
 		if (resultValidation.errors.length > 0) {
 			return res.render('users/register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
+		}else {
+			console.log('Aca va el BODY: ')
+			console.log(req.body);
+			let aCrear = {
+				'user-name': req.body['user-name'], 
+				password: req.body.password, 
+				name: req.body.name,
+				surname: req.body.surname, 
+				email: req.body.email, 
+				fNac: req.body.fNac, 
+				dni: Number(aCrear.dni)
+			}
+			if (req.file) aCrear.image = req.file.filename;
+			let aCrearID = userModel.create(aCrear);
+			return res.redirect(`/users/${aCrearID}`);
 		}
-		return res.redirect(`/users/${aCrearID}`);
 	},
 	delete: function(req,res){
 		const user = userModel.find(req.params.id);
