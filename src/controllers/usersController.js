@@ -19,23 +19,34 @@ const usersController = {
 
 	store: function(req, res){
 		const resultValidation = validationResult(req);
-		
 		console.log('Aca va el file: ');
 		console.log(req.file);
-		let aCrear = req.body;
-		aCrear.dni = Number(aCrear.dni);
-		let aCrearID = userModel.create(aCrear);
-		
-		if (req.file) aCrear.image = req.file.filename;
+		if (resultValidation.errors.length > 0) {
 			// const error = new Error('Hubo un error intente nuevamente!')
 			// return next(error)
-		if (resultValidation.errors.length > 0) {
+			console.log('Aca va el mapped:'); 
+			console.log(resultValidation.mapped()); 
+			
 			return res.render('users/register', {
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
+		}else {
+			console.log('Aca va el BODY: ')
+			console.log(req.body);
+			let aCrear = {
+				'user-name': req.body['user-name'], 
+				password: req.body.password, 
+				name: req.body.name,
+				surname: req.body.surname, 
+				email: req.body.email, 
+				fNac: req.body.fNac, 
+				dni: Number(aCrear.dni)
+			}
+			if (req.file) aCrear.image = req.file.filename;
+			let aCrearID = userModel.create(aCrear);
+			return res.redirect(`/users/${aCrearID}`);
 		}
-		return res.redirect(`/users/${aCrearID}`);
 	},
 	delete: function(req,res){
 		const user = userModel.find(req.params.id);
