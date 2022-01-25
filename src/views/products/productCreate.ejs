@@ -38,11 +38,12 @@
                             </div>
                         </label>
                         
-                        <label for="sizes">Talles:
-                            <div class="checkbox-input">
+                        <label>Talles:
+                            <div class="size">
                                 <% sizes.forEach(size => { %>
-                                    <div class="check-c-s">
-                                        <input name="sizes" type="checkbox" value="<%= size %> "> <%= size %> 
+                                    <div class="check-size">
+                                        <input class="chk"type="checkbox" value="<%= size %>"  name="sizes" id ="<%= size %>">
+                                        <label class="lbl" for = "<%= size %>"><%= size %></label>
                                     </div>
                                 <% }) %> 
                             </div>

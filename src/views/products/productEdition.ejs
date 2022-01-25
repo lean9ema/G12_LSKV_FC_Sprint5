@@ -55,17 +55,19 @@
                             </div>
                         </label>
                         
-                        <label for="sizes">Talles:
-                            <div class="checkbox-input">
-                                <%  for(let i=0;i<sizes.length;i++){ %>
-                                    <div class="check-c-s">
-                                    <% if( sizes[i] == (product.sizes).find(e=>e == sizes[i]) ){ %>
-                                        <input type="checkbox" value="<%=sizes[i]%>" name="sizes" checked><%=sizes[i]%>  
-                                    <% }else{ %> 
-                                        <input type="checkbox" value="<%=sizes[i]%>" name="sizes"><%=sizes[i]%>
-                                    <% }; %>
+                        <label>Talles:
+                            <div class="size">
+                                <% sizes.forEach(size => { %>
+                                    <div class="check-size">
+                                        <% if( size == (product.sizes).find(e=>e == size) ){ %>
+                                        <input class="chk"type="checkbox" value="<%= size %>"  name="sizes" id ="<%= size %>" checked>
+                                        <label class="lbl" for = "<%= size %>"><%= size %></label>
+                                        <% }else{ %> 
+                                            <input class="chk"type="checkbox" value="<%= size %>"  name="sizes" id ="<%= size %>">
+                                            <label class="lbl" for = "<%= size %>"><%= size %></label>
+                                        <% } %> 
                                     </div>
-                                <% }; %>  
+                                <% }) %> 
                             </div>
                         </label>
 
