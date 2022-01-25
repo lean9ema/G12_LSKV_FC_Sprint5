@@ -971,18 +971,18 @@ input.price,
 textarea.description{ 
     width: 300px;
 }
-.form-prod-char div.check-c-s .lbl img{
+form div.check-c-s .lbl img{
     display:inline-block;
     width: 33px;
     height: 33px;
     border-radius: 100%;
     cursor: pointer;
 }
-.form-prod-char div.check-c-s .chk{
+form div.check-c-s .chk{
    display: none;
 
 }
-.form-prod-char div.check-c-s .chk:checked + label img{
+form div.check-c-s .chk:checked + label img{
     padding: 2px;
     border:solid 4px #BA135D;
 }
@@ -996,10 +996,10 @@ textarea.description{
     text-align: center;
     border: 0.5px solid black;
 }
-.form-prod-char div.size .chk{
+form div.size .chk{
     display: none;
 }
-.form-prod-char div.size .chk:checked + label{
+form div.size .chk:checked + label{
     color: #FFF;
     background-color: #BA135D;
     border: 2px solid black;
