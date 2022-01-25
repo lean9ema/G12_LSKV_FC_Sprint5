@@ -51,5 +51,15 @@
   "dni": 44598453,
   "fNac": "2003-03-20",
   "id": 5
+ },
+ {
+  "user-name": "Fran12",
+  "password": "$2a$10$70pkqZKssi/BsRJNMFLnEu0JBqBoYsWnnfe2EapPkZsZsMyx.mA1q",
+  "name": "nombre",
+  "surname": "apellido",
+  "email": "otromail@gmail.com",
+  "fNac": "2022-01-11",
+  "dni": 55555555,
+  "id": 6
  }
 ]

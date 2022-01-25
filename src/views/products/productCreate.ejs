@@ -82,11 +82,10 @@
                             <% } %>
                         </label>
 
-                        <label for="image"> Ingrese una imagen:
+                        <label for="image"> Ingrese la imagen principal:
                             <input type="file" 
                                 id="image" 
-                                name="image" 
-                                value="<%= locals.oldData ? oldData.image : null%>">
+                                name="image">
                                 <% if (locals.errors && errors.image) { %>
                                     <div class="text-danger" style="width: 100%">
                                         <%= errors.image.msg %> 
@@ -103,8 +102,7 @@
                                 id="description" 
                                 cols="30" 
                                 rows="5" 
-                                class="description"><%= locals.oldData ? oldData.description : null%>
-                            </textarea>
+                                class="description"><%= locals.oldData ? oldData.description : null%></textarea>
                                 <% if (locals.errors && errors.description) { %>
                                     <div class="text-danger" style="width: 100%">
                                         <%= errors.description.msg %> 

@@ -52,7 +52,6 @@ const usersController = {
     register: function(req,res) {
         return res.render("users/register");
     },
-	
 	store: function(req, res){
 		const resultValidation = validationResult(req);
 		console.log('Aca va el file: ');
@@ -68,14 +67,17 @@ const usersController = {
 		}else {
 			console.log('Aca va el BODY: ')
 			console.log(req.body);
-			let aCrear = {
+			const contraEncritada = bcrypt.hashSync(req.body.password,10); 
+			console.log('contraEncritada:');
+			console.log(contraEncritada);
+			var aCrear = {
 				'user-name': req.body['user-name'], 
-				password: bcrypt.hashSync(req.body.password,10), 
+				password: contraEncritada, 
 				name: req.body.name,
 				surname: req.body.surname, 
 				email: req.body.email, 
 				fNac: req.body.fNac, 
-				dni: Number(aCrear.dni)
+				dni: Number(req.body.dni)
 			}
 			if (req.file) aCrear.image = req.file.filename;
 			let aCrearID = userModel.create(aCrear);

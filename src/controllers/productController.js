@@ -48,7 +48,9 @@ const productController = {
             if(!Array.isArray(req.body.color)) colorArray = [req.body.color];
             if(!Array.isArray(req.body.sizes)) sizesArray = [req.body.sizes];  
             let filenamesImgSec = [];
-            for(let i =0; i < req.files.images.length; i++) filenamesImgSec.push(req.files.images[i].filename);
+            if(req.files.images){ 
+                for(let i =0; i < req.files.images.length; i++) filenamesImgSec.push(req.files.images[i].filename);
+            }
             let aCrear = {
                 name: req.body.name,
                 price: Number(req.body.price),
