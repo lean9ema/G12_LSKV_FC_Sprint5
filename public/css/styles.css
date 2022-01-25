@@ -1005,6 +1005,11 @@ form div.size .chk:checked + label{
     border: 2px solid black;
 }
 
+main.charger form label div.text-danger { 
+    color: red;
+    font-size: 12px;
+    display: contents;
+}
 /* ProductList */
 
 main.productList .products{

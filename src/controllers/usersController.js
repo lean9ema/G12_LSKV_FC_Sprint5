@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const jsonDB = require('../model/jsonUsersDataBase');
 const { brotliCompressSync } = require('zlib');
 const userModel = jsonDB('usersDataBase');
+const bcrypt = require('bcryptjs'); 
 
 const log = console.log; 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -27,8 +28,8 @@ const usersController = {
             let usuario=undefined;
 			for (let i=0; i<users.length; i++) {
 				if(users[i].email==req.body.email){
-					if(req.body.password== users[i].password)
-					{
+					var esPass = bcrypt.compareSync(req.body.password,users[i].password);
+					if(esPass){
 						usuario=users[i];
 						break;
 					}
@@ -69,7 +70,7 @@ const usersController = {
 			console.log(req.body);
 			let aCrear = {
 				'user-name': req.body['user-name'], 
-				password: req.body.password, 
+				password: bcrypt.hashSync(req.body.password,10), 
 				name: req.body.name,
 				surname: req.body.surname, 
 				email: req.body.email, 
