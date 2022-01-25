@@ -971,7 +971,45 @@ input.price,
 textarea.description{ 
     width: 300px;
 }
+.form-prod-char div.check-c-s .lbl img{
+    display:inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.form-prod-char div.check-c-s .chk{
+   display: none;
 
+}
+.form-prod-char div.check-c-s .chk:checked + label img{
+    padding: 2px;
+    border:solid 4px #BA135D;
+}
+.form-prod-char div.size .lbl{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    border-radius: 20%;
+    cursor: pointer;
+    background-color: fff;
+    text-align: center;
+    border: 0.5px solid black;
+}
+.form-prod-char div.size .chk{
+    display: none;
+}
+.form-prod-char div.size .chk:checked + label{
+    color: #FFF;
+    background-color: #BA135D;
+    border: 2px solid black;
+}
+
+main.charger form label div.text-danger { 
+    color: red;
+    font-size: 12px;
+    display: contents;
+}
 /* ProductList */
 
 main.productList .products{

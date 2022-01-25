@@ -6,6 +6,8 @@ const colours = [{name:'Rojo',cod:'red'},{name:'Azul',cod:'blue'},{name:'Verde',
 const fs = require('fs');
 const path = require('path');
 
+const { validationResult } = require('express-validator');
+
 const productController = {
     prodDetail: (req,res) =>{
         let product = productModel.find(req.params.productId)
@@ -30,27 +32,39 @@ const productController = {
         console.log(req.files);
         console.log('Aca va el BODY: ')
         console.log(req.body);
-        let colorArray = req.body.color;
-        let sizesArray = req.body.sizes;
-        if(!Array.isArray(req.body.color)) colorArray = [req.body.color];
-        if(!Array.isArray(req.body.sizes)) sizesArray = [req.body.sizes];  
-        let filenamesImgSec = [];
-        for(let i =0; i < req.files.images.length; i++) filenamesImgSec.push(req.files.images[i].filename);
-        let aCrear = {
-            name: req.body.name,
-            price: Number(req.body.price),
-            description: req.body.description, 
-            stars: 0,
-            category: req.body.category,
-            'img-pr': req.files.image[0].filename, 
-            'img-se': filenamesImgSec
-        };
-        aCrear.colours = colorArray; 
-        aCrear.sizes = sizesArray;
-        console.log('aCrear: ');
-        console.log(aCrear);
-        productModel.create(aCrear);
-        return res.redirect('/products'); 
+        const resultValidation = validationResult(req); 
+        console.log(resultValidation.errors);
+        if(resultValidation.errors.length > 0 ){ 
+            return res.render('products/productCreate', { 
+                errors: resultValidation.mapped(), 
+                oldData: req.body,
+                categories, 
+                sizes, 
+                colours
+            })
+        }else{ 
+            let colorArray = req.body.color;
+            let sizesArray = req.body.sizes;
+            if(!Array.isArray(req.body.color)) colorArray = [req.body.color];
+            if(!Array.isArray(req.body.sizes)) sizesArray = [req.body.sizes];  
+            let filenamesImgSec = [];
+            for(let i =0; i < req.files.images.length; i++) filenamesImgSec.push(req.files.images[i].filename);
+            let aCrear = {
+                name: req.body.name,
+                price: Number(req.body.price),
+                description: req.body.description, 
+                stars: 0,
+                category: req.body.category,
+                'img-pr': req.files.image[0].filename, 
+                'img-se': filenamesImgSec
+            };
+            aCrear.colours = colorArray; 
+            aCrear.sizes = sizesArray;
+            console.log('aCrear: ');
+            console.log(aCrear);
+            productModel.create(aCrear);
+            return res.redirect('/products'); 
+        }
     },
     
     edition: (req,res) => {

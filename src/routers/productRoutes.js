@@ -2,19 +2,15 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 
-const multer = require('multer');
-
 var upload = require('../middlewares/img-products');
 
 const productController = require('../controllers/productController');
+const validatorProd = require('../middlewares/product-validator');
 
 router.get('/', productController.list);
 
 router.get('/create',productController.create);
-//router.post('/', uploadSecu.fields([{images:'images'}, {image:"image"}]) , productController.store); 
-
-router.post('/',upload.fields([{name: 'image'},{name: 'images'}]), productController.store);
-//router.post('/', [upload.single('image'),uploadM.array('images')], productController.store);
+router.post('/',upload.fields([{name: 'image'},{name: 'images'}]), validatorProd, productController.store);
 
 // mediante res query
 router.get('/filter', productController.filter);

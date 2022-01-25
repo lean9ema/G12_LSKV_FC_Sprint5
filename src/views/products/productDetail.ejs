@@ -110,7 +110,7 @@
             </div>
 
             <div class="Recomendaciones">
-                <% for( let index = 0; index < 4; index++ ) { %>
+                <% for( let index = 0; index < 4 && productList.length; index++ ) { %>
                     <article>
                         <a href="/products/<%= productList[index].id  %>">
                             <img src = "/images/products/<%= productList[index]['img-pr'] %>">
