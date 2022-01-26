@@ -61,5 +61,15 @@
   "fNac": "2022-01-11",
   "dni": 55555555,
   "id": 6
+ },
+ {
+  "user-name": "admin",
+  "password": "$2a$10$cst6q/h6YWUcf16WVqJlQ.SUy4gEKEIrDPrVfaV.4odNhLSCpz6oW",
+  "name": "admin",
+  "surname": "admin",
+  "email": "admin@gmail.com",
+  "fNac": "2022-01-26",
+  "dni": 12345678,
+  "id": 7
  }
 ]
