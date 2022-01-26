@@ -10,38 +10,6 @@
   "fNac": "2000-01-20"
  },
  {
-  "id": 2,
-  "name": "Vanina",
-  "surname": "Vilte",
-  "user-name": "srta.septum",
-  "email": "vanina.vilte@hotmail.com",
-  "dni": 42225395,
-  "fNac": "1999-11-22",
-  "image": "im-1641763920852.jpg"
- },
- {
-  "user-name": "thth",
-  "password": "thth",
-  "name": "thth",
-  "surname": "tht",
-  "email": "thth@hotmail.com",
-  "dni": 343432,
-  "fNac": "3543-04-05",
-  "image": "im-1641764040641.jpg",
-  "id": 3
- },
- {
-  "user-name": "cvdsvd",
-  "password": "cdvvsdvsd",
-  "name": "vsdvsdv",
-  "surname": "dsvdsvdsv",
-  "email": "dsvsdv@hotmail.com",
-  "dni": 34534234,
-  "fNac": "2222-04-05",
-  "image": "im-1641764087965.jpg",
-  "id": 4
- },
- {
   "user-name": "sharon123",
   "password": "sharon123",
   "name": "Sharon Melanie",

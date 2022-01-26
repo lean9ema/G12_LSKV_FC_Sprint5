@@ -17,7 +17,10 @@
             </div>
             <div class="login-home">
                 <a href="/products/productCart"><i class="fas fa-shopping-bag"></i></a>
-                <a href="/users"><i class="fas fa-user"></i></a>    
+                <% if (user) { %> 
+                    <a href="/users/<%= user.id %> "><i class="fas fa-user"></i></a>
+                <% } %>
+                    
             </div>
         </div>
         <div class="buscador2">
@@ -38,11 +41,17 @@
             </div>
     
             <div class = "IngresarRegistrarse">
-                <ul class="list-user">
-                    <li><a href="/users/login">Ingresar</a></li>
-                    <li> / </li>
-                    <li><a href="/users/register">Registrarse</a></li>
-                </ul>
+                <% if (!user) { %> 
+                    <ul class="list-user">
+                        <li><a href="/users/login">Ingresar</a></li>
+                        <li> / </li>
+                        <li><a href="/users/register">Registrarse</a></li>
+                    </ul>
+                <% } else { %>
+                    <ul class="list-user">
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                <% } %> 
             </div>
         </nav>
     </div>
