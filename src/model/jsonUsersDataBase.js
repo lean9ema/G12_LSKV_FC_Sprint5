@@ -22,7 +22,13 @@ const modelController =function(name){
         },
         nextId: function () {
             let users = this.readFile();
-            let nextID = users.length;
+            for(let user of users){
+                userMay = 0;
+                if(user.id>userMay){
+                    userMay = user.id;
+                }
+            }
+            let nextID = userMay;
             return (nextID ? ++nextID : 1);
         },
         

@@ -23,8 +23,14 @@ const modelController =function(name){
 
         nextID: function(){
             const products = this.readFile(); 
-            let UltimoID = products.length; 
-            return (UltimoID ? ++UltimoID : 1);
+            for(let product of products){
+                prodMay = 0;
+                if(product.id>prodMay){
+                    prodMay = product.id;
+                }
+            }
+            let nextID = userMay;
+            return (nextID ? ++nextID : 1);
         }, 
 
         find: function(id){ 
