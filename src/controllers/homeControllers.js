@@ -9,9 +9,13 @@ const homeController = {
    contact: (req,res) =>{
         return res.render("contact");
         },
-     business: (req,res) =>{
+   business: (req,res) =>{
           return res.render("empresa")
-     }   
+        },
+   logout: (req,res) => {
+        delete req.session.a
+        res.redirect('/')
+   },
 }
 
 module.exports = homeController; 
