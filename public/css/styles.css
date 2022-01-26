@@ -827,11 +827,11 @@ main div.guia {
 main article div.cantidad{
     margin: 5px 0px;
 }
-div.cantidad form label { 
+form div.cantidad  label { 
     margin: 0px 5px 0px 0px;
 }
 
-div.cantidad form input{
+form div.cantidad  input{
     width: 50px;
     border-radius: 5px;
     text-align: center;
@@ -949,11 +949,16 @@ main div form fieldset label{
     flex-wrap: wrap;
 }
 
-form fieldset div.color,
-form fieldset div.checkbox-input{
+form div.color,
+form div.size{
     display: flex;
     flex-direction: row;
     width: 400px;
+}
+
+form div.color label,
+form div.size label{
+    margin: 3px;
 }
 
 main.charger div.check-c-s { 
@@ -986,7 +991,7 @@ form div.check-c-s .chk:checked + label img{
     padding: 2px;
     border:solid 4px #BA135D;
 }
-.form-prod-char div.size .lbl{
+form div.size .lbl{
     display: inline-block;
     width: 40px;
     height: 30px;

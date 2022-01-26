@@ -20,28 +20,6 @@
   "image": "im-1641763920852.jpg"
  },
  {
-  "user-name": "thth",
-  "password": "thth",
-  "name": "thth",
-  "surname": "tht",
-  "email": "thth@hotmail.com",
-  "dni": 343432,
-  "fNac": "3543-04-05",
-  "image": "im-1641764040641.jpg",
-  "id": 3
- },
- {
-  "user-name": "cvdsvd",
-  "password": "cdvvsdvsd",
-  "name": "vsdvsdv",
-  "surname": "dsvdsvdsv",
-  "email": "dsvsdv@hotmail.com",
-  "dni": 34534234,
-  "fNac": "2222-04-05",
-  "image": "im-1641764087965.jpg",
-  "id": 4
- },
- {
   "user-name": "sharon123",
   "password": "sharon123",
   "name": "Sharon Melanie",
@@ -53,16 +31,6 @@
   "id": 5
  },
  {
-  "user-name": "Fran12",
-  "password": "$2a$10$70pkqZKssi/BsRJNMFLnEu0JBqBoYsWnnfe2EapPkZsZsMyx.mA1q",
-  "name": "nombre",
-  "surname": "apellido",
-  "email": "otromail@gmail.com",
-  "fNac": "2022-01-11",
-  "dni": 55555555,
-  "id": 6
- },
- {
   "user-name": "admin",
   "password": "$2a$10$cst6q/h6YWUcf16WVqJlQ.SUy4gEKEIrDPrVfaV.4odNhLSCpz6oW",
   "name": "admin",
@@ -71,5 +39,16 @@
   "fNac": "2022-01-26",
   "dni": 12345678,
   "id": 7
+ },
+ {
+  "user-name": "Zombie_Smile9",
+  "password": "$2a$10$zzflg03lrpYSDiBHnN0OV.dzWCCg8fGuwYzgdjbHvuZUypBVsYe6C",
+  "name": "Leandro",
+  "surname": "Marino",
+  "email": "lean9marino@gmail.com",
+  "fNac": "1997-09-29",
+  "dni": 40673723,
+  "image": "avatar-1643222317208.jpg",
+  "id": 8
  }
 ]
