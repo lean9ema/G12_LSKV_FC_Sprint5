@@ -27,7 +27,7 @@ const usersController = {
 			let users= userModel.all();
             let usuario=undefined;
 			for (let i=0; i<users.length; i++) {
-				if(users[i].email==req.body.email){
+				if(users[i].email==req.body.email || users[i]['user-name']==req.body.email ){
 					var esPass = bcrypt.compareSync(req.body.password,users[i].password);
 					if(esPass){
 						usuario=users[i];
