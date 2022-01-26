@@ -1,36 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Kenet",
-  "surname": "Chapeton",
-  "password": "Mono1234",
-  "user-name": "KenetC",
-  "email": "kenetchape@gmail.com",
-  "dni": 222,
-  "fNac": "2000-01-20"
- },
- {
-  "user-name": "sharon123",
-  "password": "sharon123",
-  "name": "Sharon Melanie",
-  "confirm-password": "sharon123",
-  "surname": "flores garcia",
-  "email": "sharonmelanie.flores@gmail.com",
-  "dni": 44598453,
-  "fNac": "2003-03-20",
-  "id": 5
- },
- {
-  "user-name": "Fran12",
-  "password": "$2a$10$70pkqZKssi/BsRJNMFLnEu0JBqBoYsWnnfe2EapPkZsZsMyx.mA1q",
-  "name": "nombre",
-  "surname": "apellido",
-  "email": "otromail@gmail.com",
-  "fNac": "2022-01-11",
-  "dni": 55555555,
-  "id": 6
- },
- {
   "user-name": "admin",
   "password": "$2a$10$cst6q/h6YWUcf16WVqJlQ.SUy4gEKEIrDPrVfaV.4odNhLSCpz6oW",
   "name": "admin",
@@ -38,6 +7,17 @@
   "email": "admin@gmail.com",
   "fNac": "2022-01-26",
   "dni": 12345678,
-  "id": 7
+  "id": 1
+ },
+ {
+  "user-name": "srta.septum",
+  "password": "$2a$10$XkWBrXQJKH20l.ZwtLp7fOvTYFKbQN5b1zTckYTOA5vfGYnQkcx5u",
+  "name": "Vanina",
+  "surname": "Vilte",
+  "email": "vanina.vilte@hotmail.com",
+  "fNac": "1999-11-22",
+  "dni": 42225395,
+  "image": "avatar-1643226566797.png",
+  "id": 2
  }
 ]
