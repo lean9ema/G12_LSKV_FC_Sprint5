@@ -3,12 +3,11 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 
 const jsonDB = require('../model/jsonUsersDataBase');
-const { brotliCompressSync } = require('zlib');
 const userModel = jsonDB('usersDataBase');
 const bcrypt = require('bcryptjs'); 
 
 const log = console.log; 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 const usersController = {
     login: function(req,res) {
