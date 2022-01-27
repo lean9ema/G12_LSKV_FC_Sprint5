@@ -2,12 +2,15 @@
 
 *RETROSPECTIVA*
 
-**Arreglamos los errores con Heroku**
-**Cambiamos los formatos de los formularios**
-**El carrito anda con una cookie(Solo se puede comprar un producto).**
-**Cumplimos con los puntos del sprint**
+> **Arreglamos los errores con Heroku**.
+> 
+> **Cambiamos los formatos de los formularios**.
+> 
+> **El carrito anda con una cookie(Solo se puede comprar un producto)**.
+> 
+> **Cumplimos con los puntos del sprint**.
 
-# Usuario de admin
+## Usuario de admin
 - User: admin
 - Email:admin
 - Password: admin1234
