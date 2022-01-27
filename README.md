@@ -2,15 +2,15 @@
 
 *RETROSPECTIVA*
 
-*Arreglamos los errores con Heroku*
+**Arreglamos los errores con Heroku**
 **Cambiamos los formatos de los formularios**
 **El carrito anda con una cookie(Solo se puede comprar un producto).**
 **Cumplimos con los puntos del sprint**
 
-*Usuario de admin*
-User: admin
-Email:admin
-Password: admin1234
+# Usuario de admin
+- User: admin
+- Email:admin
+- Password: admin1234
 
 ## Start Doing: (cosas nuevas para probar) ⭐
 - Usar más liveShare para solucionar problemas de código

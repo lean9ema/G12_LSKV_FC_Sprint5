@@ -21,13 +21,14 @@
   "id": 2
  },
  {
-  "id": 3,
+  "user-name": "srta.septum",
+  "password": "$2a$10$fc0E1zBthasgBTtBNt/XyuOd/w.NAeLrg.5FEVM2qNX.NrbYhqhE6",
   "name": "Vanina",
   "surname": "Vilte",
-  "user-name": "srta.septum",
-  "email": "vanina.vilte@hotmail.com",
-  "dni": 42225395,
+  "email": "vaninasvilte@gmail.com",
   "fNac": "1999-11-22",
-  "image": "avatar-1643226566797.png"
+  "dni": 42225395,
+  "image": "avatar-1643243365201.jpg",
+  "id": 3
  }
 ]
