@@ -7,6 +7,8 @@
 **El carrito anda con una cookie(Solo se puede comprar un producto).**
 **Cumplimos con los puntos del sprint**
 
+/users Lista de usuarios
+
 # Usuario de admin
 - User: admin
 - Email:admin
