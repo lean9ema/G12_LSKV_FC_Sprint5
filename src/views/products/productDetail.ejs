@@ -83,7 +83,7 @@
                                     Cantidad: 
                                 </label>
                                 <input type="number" id="cant" name="cant" min="1" value="1">
-                                <button type="submit" >Agregar al carrito</button>
+                                <button type="submit" class="style-button">Agregar al carrito</button>
                         </div>
                     </form>
                     <div class="locales">
@@ -97,10 +97,10 @@
                     </div>
                     <div class="Botones"> 
                         <form action="/products/<%=product.id%>/edit"style="display: inline-flex" class="delete">
-                            <button type="submit">Editar producto</button>
+                            <button type="submit" class="style-button">Editar producto</button>
                         </form>
                         <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex" class="delete">
-                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                            <button type="submit" class="action-button delete style-button">ELIMINAR</button>
                         </form>
                     </div>
                 </div> 
