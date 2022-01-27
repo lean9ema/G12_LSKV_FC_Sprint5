@@ -120,7 +120,8 @@ const usersController = {
 				email: req.body.email, 
 				dni: Number(req.body.dni), 
 				fNac: req.body.fNac,
-				image: req.file.filename 
+				image: req.file.filename,
+				password: user.password
 			}; 
 		} else if(req.body['img-default'] == 'on') { 
 			if (user.image != undefined) fs.unlinkSync(path.join(__dirname,`../../public/images/users/${user.image}`));
@@ -131,7 +132,8 @@ const usersController = {
 				'user-name': req.body['user-name'], 
 				email: req.body.email, 
 				dni: Number(req.body.dni), 
-				fNac: req.body.fNac, 
+				fNac: req.body.fNac,
+				password: user.password 
 			};
 		}else { 
 			user_edit = { 
@@ -142,12 +144,13 @@ const usersController = {
 				email: req.body.email, 
 				dni: Number(req.body.dni), 
 				fNac: req.body.fNac, 
-				image: user.image
+				image: user.image,
+				password: user.password
 			};
 		}
 		log(user_edit); 
 		userModel.update(user_edit); 
-		res.redirect('/users');
+		res.redirect(`/users/${req.params.id}`);
 	}
 
    
