@@ -10,15 +10,15 @@
   "id": 1
  },
  {
-  "user-name": "Zombie_Smile9",
-  "password": "$2a$10$zzflg03lrpYSDiBHnN0OV.dzWCCg8fGuwYzgdjbHvuZUypBVsYe6C",
+  "id": 2,
   "name": "Leandro",
   "surname": "Marino",
+  "user-name": "Zombie_Smile9",
   "email": "lean9marino@gmail.com",
-  "fNac": "1997-09-29",
   "dni": 40673723,
+  "fNac": "1997-09-29",
   "image": "avatar-1643222317208.jpg",
-  "id": 2
+  "password": "$2a$10$zzflg03lrpYSDiBHnN0OV.dzWCCg8fGuwYzgdjbHvuZUypBVsYe6C"
  },
  {
   "user-name": "srta.septum",
