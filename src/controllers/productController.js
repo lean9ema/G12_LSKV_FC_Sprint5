@@ -133,7 +133,7 @@ const productController = {
     prodCart: function (req,res){
         console.log(req.params.id)
         console.log(req.body.cant)
-        let prod = [req.params.id,req.body.cant]
+        let prod = [req.params.id,req.body.cant,req.body.sizes]
         res.cookie('carrito', prod, {maxAge:60000*60*60});
         console.log(req.cookies.carrito)
         res.redirect('/products/productCart')
@@ -142,6 +142,7 @@ const productController = {
         if(req.cookies.carrito){
             let product = productModel.find(req.cookies.carrito[0])
             product.cant = Number(req.cookies.carrito[1])
+            product.size = req.cookies.carrito[2]
             product.total = product.price*product.cant
             console.log(product)
             return res.render("products/productCart",{product})

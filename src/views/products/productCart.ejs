@@ -4,24 +4,32 @@
     <body>
         <%- include('../partials/header.ejs') %>
         <main> 
-            <% if (locals.product) { %>
+            
             <section>
                 <article>
                     <h4 class="title">Tu carrito de compras</h4>
                 </article>
                 <article class="paso">
                     <h2 class="pasoUno">1</h2>
-                    <a href='/products/productCart2'><h2>2</h2></a>
-                    <a href='/products/productCart3'><h2>3</h2></a>
-                    <a href='/products/productCart4'><h2>4</h2></a>
+                    <% if (locals.product) { %>
+                        <a href='/products/productCart2'><h2>2</h2></a>
+                        <a href='/products/productCart3'><h2>3</h2></a>
+                        <a href='/products/productCart4'><h2>4</h2></a>
+                        <% } else{%>
+                            <h2>2</h2>
+                            <h2>3</h2>
+                            <h2>4</h2>
+                        <%} %> 
+                    
                 </article>
             </section>
+
+            <% if (locals.product) { %>
 
             <p class="title-1-prodCart">
                 Tu carrito tiene x productos distintos
             </p>
-            
-            
+
                     <section class="det-compra">
                         <article class="detalle-prod">
                             <div class="imagen-prod"><img src="/images/products/<%= product['img-pr'] %> " alt="Foto del producto" class="Foto del producto"></div>
