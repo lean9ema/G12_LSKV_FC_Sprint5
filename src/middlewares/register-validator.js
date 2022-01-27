@@ -1,6 +1,6 @@
 const {body} = require('express-validator'); 
 const path = require('path');
-const jsonDB = require('../model/jsonUsersDatabase');
+const jsonDB = require('../model/jsonUsersDataBase');
 const userModel = jsonDB('usersDataBase'); 
 
 var fecha = new Date(); 
