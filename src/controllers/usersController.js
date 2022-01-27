@@ -43,7 +43,7 @@ const usersController = {
 			console.log(usuario)
 
 			req.session.a=usuario;
-			res.redirect("/")
+			res.redirect(`/users/${req.session.a.id}`)
 		}else {
 			return res.render("users/login", {errors: resultValidation.errors})
 		}
