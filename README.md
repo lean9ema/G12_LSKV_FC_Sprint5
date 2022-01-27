@@ -2,7 +2,8 @@
 
 *RETROSPECTIVA*
 
-> **Arreglamos los errores con Heroku**.
+> **Arreglamos los errores con Heroku, en el  require de jsonDB en usersController era ('../model/jsonUsersDatabase')**
+ **y se arreglo replanteando la ruta como ('../model/jsonUsersDataBase'). Heroku en el require distingue entre minusculas y mayusculas**.
 > 
 > **Cambiamos los formatos de los formularios**.
 > 
@@ -10,6 +11,7 @@
 > 
 > **Cumplimos con los puntos del sprint**.
 
+>/users (Lista de usuarios)
 ## Usuario de admin
 - User: admin
 - Email:admin
