@@ -2,7 +2,7 @@
 
 *RETROSPECTIVA*
 
-*Arreglamos los errores con Heroku*
+**Arreglamos los errores con Heroku**
 **Cambiamos los formatos de los formularios**
 **El carrito anda con una cookie(Solo se puede comprar un producto).**
 **Cumplimos con los puntos del sprint**
