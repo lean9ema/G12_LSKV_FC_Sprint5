@@ -995,7 +995,7 @@ form div.check-c-s .lbl img{
     height: 33px;
     border-radius: 100%;
     cursor: pointer;
-    transition: 450ms;
+    transition: 200ms;
 }
 form div.check-c-s .lbl img:hover{
     width: 40px;
