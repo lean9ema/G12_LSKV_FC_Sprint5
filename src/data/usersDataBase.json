@@ -6,7 +6,8 @@
   "surname": "admin",
   "email": "admin@gmail.com",
   "dni": 12345678,
-  "id": 1
+  "id": 1,
+  "rol":1
  },
  {
   "id": 2,
@@ -17,7 +18,8 @@
   "dni": 40673723,
   "fNac": "1997-09-29",
   "image": "avatar-1643222317208.jpg",
-  "password": "$2a$10$zzflg03lrpYSDiBHnN0OV.dzWCCg8fGuwYzgdjbHvuZUypBVsYe6C"
+  "password": "$2a$10$zzflg03lrpYSDiBHnN0OV.dzWCCg8fGuwYzgdjbHvuZUypBVsYe6C",
+  "rol":0
  },
  {
   "user-name": "srta.septum",
@@ -28,6 +30,7 @@
   "dni": 42225395,
   "fNac": "1999-11-22",
   "image": "avatar-1643243365201.jpg",
-  "id": 3
+  "id": 3,
+  "rol":0
  }
 ]

@@ -121,7 +121,8 @@ const usersController = {
 				dni: Number(req.body.dni), 
 				fNac: req.body.fNac,
 				image: req.file.filename,
-				password: user.password
+				password: user.password,
+				rol: user.rol
 			}; 
 		} else if(req.body['img-default'] == 'on') { 
 			if (user.image != undefined) fs.unlinkSync(path.join(__dirname,`../../public/images/users/${user.image}`));
@@ -133,7 +134,8 @@ const usersController = {
 				email: req.body.email, 
 				dni: Number(req.body.dni), 
 				fNac: req.body.fNac,
-				password: user.password 
+				password: user.password,
+				rol: user.rol
 			};
 		}else { 
 			user_edit = { 
@@ -145,7 +147,8 @@ const usersController = {
 				dni: Number(req.body.dni), 
 				fNac: req.body.fNac, 
 				image: user.image,
-				password: user.password
+				password: user.password,
+				rol: user.rol
 			};
 		}
 		log(user_edit); 

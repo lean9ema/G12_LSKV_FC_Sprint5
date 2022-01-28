@@ -34,7 +34,9 @@
                 <ul class="list-home">
                     <li><a href="/products">Productos</a></li>
                     <li><a href="/locals">Locales</a></li>
-                    <li><a href="/products/create">Crear producto</a></li>
+                    <% if (user && user.rol == 1) { %>
+                        <li><a href="/products/create">Crear producto</a></li>
+                    <% } %>
                     <li><a href="/empresa">Empresa</a></li>
                     <li><a href="/contact">Contacto</a></li>
                 </ul>
